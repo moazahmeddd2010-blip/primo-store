@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#080808">
+<title>𝑷𝑹𝑰𝑴𝑶 𝑺𝑻𝑶𝑹𝑬</title>
+<style>
+:root{--gold:#f5c542;--gold2:#ffe9a3;--bg:#070707;--panel:#121212;--line:#493719;--rainbow:linear-gradient(100deg,#ff3030,#ff9d00,#fff000,#30ff85,#00d9ff,#8b55ff,#ff35c9,#ff3030)}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:#fff;font-family:Arial,Tahoma,sans-serif;overflow-x:hidden}
+button,input,textarea{font:inherit}button,a{-webkit-tap-highlight-color:transparent}button{cursor:pointer}a{color:inherit;text-decoration:none}
+body:before{content:"";position:fixed;inset:0;z-index:-1;background:radial-gradient(ellipse at 50% -15%,#79571d44,transparent 50%),radial-gradient(circle at 100% 50%,#f5c5420c,transparent 35%)}
+header{position:sticky;top:0;z-index:30;background:#080808ed;backdrop-filter:blur(15px);border-bottom:1px solid #493719}
+.nav{max-width:1100px;margin:auto;padding:13px 16px;display:flex;align-items:center;justify-content:space-between}
+.brand{font-size:23px;font-weight:1000;background:var(--rainbow);background-size:300% 300%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:rainbowMove 8s linear infinite;filter:drop-shadow(0 0 9px #b35cff55)}
+.brand small{display:block;text-align:center;color:#aaa;font-size:9px;letter-spacing:3px;margin-top:4px}
+.nav-tag{border:1px solid #59451e;border-radius:25px;padding:8px 11px;color:#ccc;font-size:11px}
+.container{max-width:1100px;margin:auto;padding:17px}
+.hero{text-align:center;padding:40px 15px;border:1px solid transparent;border-radius:25px;background:linear-gradient(140deg,#241a08,#101010 55%,#080808) padding-box,var(--rainbow) border-box;background-size:auto,300% 300%;animation:rainbowMove 8s linear infinite;box-shadow:0 0 20px #8b55ff22,0 0 35px #00d9ff11}
+.hero h1{font-size:clamp(29px,7vw,53px);margin:0;background:var(--rainbow);background-size:300% 300%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:rainbowMove 8s linear infinite}
+.hero h2{font-size:13px;letter-spacing:4px;margin:12px}.hero p{color:#aaa;font-size:13px;line-height:2}.shine{display:inline-block;width:70px;height:3px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.social-links{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px;margin:20px 0}
+.social-link{min-width:0;text-align:center;padding:15px 7px;border:1px solid #3c3425;border-radius:15px;background:linear-gradient(145deg,#1b1b1b,#0c0c0c);transition:.2s}
+.social-link:active{transform:scale(.96)}.social-icon{width:43px;height:43px;border-radius:13px;display:grid;place-items:center;margin:0 auto 9px;font-size:23px;font-weight:bold}
+.yt-icon{background:#ff2020;color:white}.wa-icon{background:#20c96b;color:white}.social-link b{display:block;font-size:12px}.social-link small{display:block;color:#999;font-size:10px;margin-top:6px}
+.searchbox{margin:20px auto;max-width:650px}.searchbox input{width:100%;padding:16px;border:1px solid #493719;border-radius:14px;background:#111;color:#fff;outline:none}
+.searchbox input:focus{border-color:#00d9ff;box-shadow:0 0 15px #00d9ff33}
+.section-title{display:flex;justify-content:space-between;align-items:center;margin:25px 2px 14px}.section-title h3{margin:0;color:var(--gold);font-size:17px;text-shadow:0 0 12px #f5c54277}.section-title span{color:#888;font-size:11px}
+.categories{display:flex;gap:9px;overflow:auto;padding:3px 0 12px;scrollbar-width:none}.categories button{flex-shrink:0;padding:10px 16px;border:1px solid #393020;border-radius:30px;color:#ccc;background:#111}
+.categories button.active{background:var(--rainbow);background-size:300% 300%;animation:rainbowMove 8s linear infinite;color:#080808;border-color:transparent;font-weight:bold;box-shadow:0 0 14px #8b55ff55}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}
+.app{position:relative;min-width:0;overflow:hidden;padding:10px;border-radius:19px;background:linear-gradient(145deg,#191919,#0b0b0b);border:1px solid #70551e;box-shadow:0 0 12px #f5c54212;animation:cardIn .5s ease both}
+.app:before{content:"";position:absolute;inset:-2px;border-radius:20px;padding:1px;background:var(--rainbow);background-size:300% 300%;animation:rainbowMove 8s linear infinite;-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none}
+.app:hover{transform:translateY(-4px);box-shadow:0 0 12px #f5c54255,0 0 25px #00d9ff22,0 0 35px #ff35c922}.app:active{transform:scale(.98)}
+@keyframes rainbowMove{0%{background-position:0% 50%}100%{background-position:200% 50%}}@keyframes cardIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+.more-btn{position:absolute;top:16px;right:16px;z-index:5;width:34px;height:34px;border:1px solid #ffffff33;border-radius:50%;background:#050505d9;color:white;font-size:22px;line-height:20px}
+.more-menu{display:none;position:absolute;top:54px;right:13px;z-index:10;width:180px;padding:6px;background:#171717;border:1px solid #806020;border-radius:13px;box-shadow:0 8px 25px #000}
+.more-menu.show{display:block;animation:pop .15s ease}@keyframes pop{from{opacity:0;transform:scale(.92)}to{opacity:1;transform:scale(1)}}
+.more-menu button{display:block;width:100%;padding:11px;text-align:right;border:0;border-radius:8px;color:white;background:transparent;font-size:12px}
+.card-cover{width:100%;height:145px;object-fit:cover;border-radius:12px;background:#080808;display:block}
+.card-title{font-size:15px;margin:12px 2px 7px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.card-desc{color:#999;font-size:11px;line-height:1.7;height:38px;overflow:hidden;margin:0 2px 10px}
+.meta{display:flex;justify-content:space-between;gap:5px;color:#999;font-size:10px}
+.card-open,.download-main{display:block;width:100%;margin-top:12px;padding:12px;border:0;border-radius:10px;color:#111;font-weight:bold;font-size:13px;text-align:center;background:var(--rainbow);background-size:300% 300%;animation:rainbowMove 8s linear infinite;box-shadow:0 0 12px #8b55ff44;transition:.25s}
+.card-open:active,.download-main:active{transform:scale(.97);filter:brightness(1.2)}
+.empty{grid-column:1/-1;text-align:center;padding:40px 15px;color:#888;background:#111;border:1px dashed #59451e;border-radius:17px;line-height:2}.empty b{color:var(--gold)}
+#detailsPage{display:none}#detailsPage.show{display:block;animation:pageIn .35s ease}#storePage.hide{display:none}
+@keyframes pageIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+.back-btn{display:inline-block;padding:10px 16px;margin:3px 0 15px;border-radius:10px;background:#191919;border:1px solid #8b55ff;color:var(--gold);font-weight:bold;box-shadow:0 0 12px #8b55ff33}
+.detail-shell{overflow:hidden;border:1px solid #70551e;border-radius:22px;background:#111;box-shadow:0 0 25px #f5c54216}
+.detail-cover{height:250px;width:100%;object-fit:cover;display:block;background:#080808}
+.detail-head{position:relative;text-align:center;padding:0 15px 20px;background:linear-gradient(#17130b,#111)}
+.profile-icon{width:112px;height:112px;object-fit:cover;border-radius:50%;border:4px solid var(--gold);background:#080808;margin-top:-58px;box-shadow:0 0 20px #f5c54288;animation:spin360 12s linear infinite}
+@keyframes spin360{from{transform:rotate(0)}to{transform:rotate(360deg)}}
+.detail-head h1{color:var(--gold);font-size:25px;margin:12px 0 7px;text-shadow:0 0 13px #f5c54255}.detail-category{color:#aaa;font-size:12px}
+.detail-description{color:#ccc;font-size:13px;line-height:2;margin:15px 0 0;white-space:pre-wrap}
+.detail-section{margin:15px;padding:17px;background:#171717;border:1px solid #352817;border-radius:15px}.detail-section h3{color:var(--gold);font-size:15px;margin:0 0 13px}
+.detail-text{color:#ccc;font-size:13px;line-height:2;white-space:pre-wrap;overflow-wrap:anywhere}
+.gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.gallery img{width:100%;height:230px;object-fit:contain;border-radius:13px;border:1px solid #806020;background:#080808;padding:3px}
+.info-line{display:flex;justify-content:space-between;gap:12px;padding:11px 0;border-bottom:1px solid #302719;font-size:12px}.info-line:last-child{border:0}.info-line span{color:#999}.info-line b{text-align:left;overflow-wrap:anywhere}
+.detail-tools{display:flex;justify-content:flex-start;position:relative;margin:12px 0 0}.detail-more{border:1px solid #70551e;border-radius:10px;background:#151515;color:var(--gold);padding:10px 15px;font-size:13px}
+.detail-menu{display:none;position:absolute;top:45px;right:0;z-index:20;width:205px;padding:7px;background:#191919;border:1px solid #806020;border-radius:13px;box-shadow:0 8px 25px #000}.detail-menu.show{display:block}
+.detail-menu button{display:block;width:100%;padding:12px;border:0;border-radius:8px;text-align:right;color:white;background:transparent;font-size:12px}
+.social-stats{display:flex;gap:10px;flex-wrap:wrap;margin:15px 0}.social-stat{flex:1;min-width:100px;text-align:center;padding:13px 8px;background:#101010;border:1px solid #493719;border-radius:12px}
+.social-stat b{display:block;color:var(--gold);font-size:21px}.social-stat span{color:#aaa;font-size:11px}
+.like-button{width:100%;padding:14px;border-radius:12px;border:1px solid #773030;background:#251010;color:#ff7777;font-size:15px;font-weight:bold}.like-button.liked{background:#501515;border-color:#ff4141;box-shadow:0 0 15px #ff242433}
+.comment-form{margin-top:15px}.comment-form textarea{width:100%;min-height:90px;resize:vertical;padding:13px;border-radius:11px;border:1px solid #493719;background:#090909;color:white;outline:none;line-height:1.8}
+.comment-submit{width:100%;margin-top:9px;padding:13px;border:0;border-radius:10px;color:#111;font-weight:bold;background:linear-gradient(100deg,#b8860b,#ffe08a,#c59620)}
+.comment{padding:13px;margin-top:10px;background:#101010;border:1px solid #332817;border-radius:11px}.comment b{color:var(--gold);font-size:12px}.comment p{color:#ddd;font-size:12px;line-height:1.9;white-space:pre-wrap;overflow-wrap:anywhere;margin:8px 0 0}.comment small{display:block;color:#777;font-size:10px;margin-top:7px}.no-comments{text-align:center;color:#888;font-size:12px;padding:15px}
+.action-area{padding:15px}.youtube-btn{display:block;text-align:center;margin-top:13px;padding:14px;border-radius:12px;background:linear-gradient(110deg,#b80000,#ff2424,#a90000);color:white;font-weight:bold;font-size:15px;box-shadow:0 0 18px #ff000044}
+.youtube-icon{display:inline-grid;place-items:center;width:25px;height:19px;margin-left:6px;border-radius:6px;background:white;color:red;font-size:13px}
+.youtube-note{text-align:center;margin-top:10px;padding:12px;border:1px solid #b32626;border-radius:11px;background:linear-gradient(120deg,#260909,#171010,#290909);color:#ffb5b5;font-size:12px;line-height:2}
+.hidden{display:none!important}footer{text-align:center;color:#777;border-top:1px solid #292116;padding:25px 15px;margin-top:40px;font-size:12px}footer strong{color:var(--gold)}
+.toast{position:fixed;bottom:25px;left:50%;transform:translateX(-50%) translateY(20px);opacity:0;pointer-events:none;z-index:100;background:#202020;border:1px solid var(--gold);color:white;padding:12px 18px;border-radius:30px;font-size:12px;box-shadow:0 0 20px #f5c54244;transition:.3s;white-space:nowrap}.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+@media(max-width:750px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.card-cover{height:120px}.detail-cover{height:200px}.gallery img{height:205px}}
+@media(max-width:430px){.grid{gap:9px}.app{padding:8px}.card-cover{height:105px}.card-title{font-size:13px}.brand{font-size:19px}.detail-cover{height:175px}.gallery{gap:8px}.gallery img{height:175px}.social-links{gap:7px}.social-link{padding:12px 4px}.social-link b{font-size:10px}.social-link small{font-size:9px}}
+</style>
+</head>
+<body>
+<header><div class="nav"><div class="brand">𝑷𝑹𝑰𝑴𝑶 𝑺𝑻𝑶𝑹𝑬<small>PREMIUM APP STORE</small></div><div class="nav-tag">👑 OFFICIAL STORE</div></div></header>
+<main class="container">
+<div id="storePage">
+<section class="hero"><h1>𝑷𝑹𝑰𝑴𝑶 𝑺𝑻𝑶𝑹𝑬</h1><span class="shine"></span><h2>YOUR DIGITAL WORLD</h2><p>اكتشف أفضل التطبيقات والألعاب والبرامج في مكان واحد.<br>اختار برنامجك واستمتع بتجربة تحميل سهلة.</p></section>
+<section class="social-links">
+<a class="social-link" href="https://youtube.com/@elmotamrdeen?si=NqibEEXMB8PDCL-2" target="_blank" rel="noopener"><div class="social-icon yt-icon">▶</div><b>قناة يوتيوب</b><small>تابع فيديوهاتنا</small></a>
+<a class="social-link" href="https://whatsapp.com/channel/0029Vb9Do4jCsU9NPGStY301" target="_blank" rel="noopener"><div class="social-icon wa-icon">◉</div><b>قناة واتساب</b><small>تابع آخر الأخبار</small></a>
+<a class="social-link" href="https://chat.whatsapp.com/JZb4KU0yYFy7djdREu3wsX?s=cl&p=a&iam=2" target="_blank" rel="noopener"><div class="social-icon wa-icon">👥</div><b>جروب واتساب</b><small>انضم لجروباتنا</small></a>
+</section>
+<div class="searchbox"><input id="search" placeholder="🔎 ابحث عن تطبيق أو لعبة..."></div>
+<div class="section-title"><h3>✦ تصنيفات المتجر</h3><span>EXPLORE</span></div>
+<div class="categories" id="categories">
+<button class="active" data-category="الكل">الكل</button><button data-category="تطبيقات">📱 تطبيقات</button><button data-category="ألعاب">🎮 ألعاب</button><button data-category="أدوات">🛠 أدوات</button><button data-category="تصميم">🎨 تصميم</button><button data-category="تعليم">📚 تعليم</button><button data-category="أخرى">✨ أخرى</button>
+</div>
+<div class="section-title"><h3>🔥 أحدث الإضافات</h3><span id="count">0 PROGRAMS</span></div>
+<section class="grid" id="apps"></section>
+</div>
+<div id="detailsPage"><button class="back-btn" onclick="goHome()">❮ رجوع للمتجر</button><div id="detailsContent"></div></div>
+</main>
+<footer><strong>𝑷𝑹𝑰𝑴𝑶 𝑺𝑻𝑶𝑹𝑬</strong><p>PREMIUM DIGITAL EXPERIENCE</p><p>جميع الحقوق محفوظة © 2026</p></footer>
+<div class="toast" id="toast"></div>
+
+<script>
+const STORAGE_KEY="q3da_store_admin_v2",SOCIAL_KEY="PRIMO_STORE_SOCIAL_V1",DB_NAME="PRIMO_STORE_FILES_V4",DB_VERSION=1;
+let programs=[],preparedPrograms=[],selectedCategory="الكل",currentProgram=null,fileURLs=new Map(),databasePromise=null,toastTimer=null,socialData={};
+const $=id=>document.getElementById(id);
+function escapeHTML(value){return String(value??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+function safeURL(value){try{const u=new URL(value);return ["http:","https:"].includes(u.protocol)?u.href:""}catch(e){return ""}}
+function showToast(text){const t=$("toast");t.textContent=text;t.classList.add("show");clearTimeout(toastTimer);toastTimer=setTimeout(()=>t.classList.remove("show"),2300)}
+function loadSocialData(){try{const saved=JSON.parse(localStorage.getItem(SOCIAL_KEY)||"{}");socialData=saved&&typeof saved==="object"?saved:{}}catch(e){socialData={}}}
+function saveSocialData(){try{localStorage.setItem(SOCIAL_KEY,JSON.stringify(socialData))}catch(e){showToast("مساحة التخزين غير كافية")}}
+function getSocial(id){if(!socialData[id])socialData[id]={likes:[],comments:[]};if(!Array.isArray(socialData[id].likes))socialData[id].likes=[];if(!Array.isArray(socialData[id].comments))socialData[id].comments=[];return socialData[id]}
+function openDB(){if(databasePromise)return databasePromise;databasePromise=new Promise((resolve,reject)=>{if(!window.indexedDB){reject(new Error("IndexedDB غير مدعوم"));return}const request=indexedDB.open(DB_NAME,DB_VERSION);request.onupgradeneeded=()=>{const db=request.result;if(!db.objectStoreNames.contains("files"))db.createObjectStore("files",{keyPath:"id"})};request.onsuccess=()=>resolve(request.result);request.onerror=()=>reject(request.error)});return databasePromise}
+async function getStoredFile(id){if(!id)return null;const db=await openDB();return new Promise((resolve,reject)=>{if(!db.objectStoreNames.contains("files")){reject(new Error("مخزن الملفات غير موجود"));return}const tx=db.transaction("files","readonly"),req=tx.objectStore("files").get(id);req.onsuccess=()=>resolve(req.result||null);req.onerror=()=>reject(req.error)})}
+async function getFileURL(id){if(!id)return "";if(fileURLs.has(id))return fileURLs.get(id);try{const record=await getStoredFile(id);if(!record||!record.blob)return "";const url=URL.createObjectURL(record.blob);fileURLs.set(id,url);return url}catch(error){console.error("فشل قراءة الملف:",error);return ""}}
+function getImageIds(p){const images=p.images||{};let ids=[];if(Array.isArray(images.gallery))ids=ids.concat(images.gallery);if(Array.isArray(p.gallery))ids=ids.concat(p.gallery);if(Array.isArray(images.extra))ids=ids.concat(images.extra);else if(typeof images.extra==="string"&&images.extra)ids.push(images.extra);return [...new Set(ids.filter(x=>typeof x==="string"&&x))].slice(0,6)}
+async function prepareProgram(p){const images=p.images||{};const icon=await getFileURL(images.icon)||await getFileURL(images.cover)||safeURL(p.image);const cover=await getFileURL(images.cover)||await getFileURL(images.icon)||safeURL(p.image);const gallery=[];for(const id of getImageIds(p)){const url=await getFileURL(id);if(url&&!gallery.includes(url))gallery.push(url)}if(!gallery.length&&p.image){const old=safeURL(p.image);if(old)gallery.push(old)}let download=safeURL(p.download);if(p.fileId)download=await getFileURL(p.fileId)||download;return {...p,displayIcon:icon,displayCover:cover,displayGallery:gallery.slice(0,6),displayDownload:download}}
+async function loadPrograms(){
+ try{
+  let remote=[];
+  if(window.PRIMO_FIREBASE?.connected){const fb=window.PRIMO_FIREBASE;const snap=await fb.getDocs(fb.collection(fb.db,"programs"));remote=snap.docs.map(doc=>({id:doc.id,...doc.data()}))}
+  if(remote.length){programs=remote}else{const saved=JSON.parse(localStorage.getItem(STORAGE_KEY)||"[]");programs=Array.isArray(saved)?saved:[]}
+  preparedPrograms=await Promise.all(programs.map(p=>prepareProgram(p)));
+ }catch(error){console.error("Firebase load error:",error);try{const saved=JSON.parse(localStorage.getItem(STORAGE_KEY)||"[]");programs=Array.isArray(saved)?saved:[]}catch(e){programs=[]}preparedPrograms=await Promise.all(programs.map(p=>prepareProgram(p)))}
+ render();checkSharedLink();
+}
+window.loadProgramsFromFirebase=loadPrograms;
+function render(){const q=$("search").value.trim().toLowerCase();const list=preparedPrograms.filter(p=>p.status==="published"&&(selectedCategory==="الكل"||p.category===selectedCategory)&&(String(p.name||"").toLowerCase().includes(q)||String(p.description||"").toLowerCase().includes(q)));$("count").textContent=list.length+" PROGRAMS";const root=$("apps");if(!list.length){root.innerHTML='<div class="empty"><div style="font-size:38px">📦</div><b>لسه مفيش برامج هنا</b><br>البرامج المنشورة من لوحة الإدارة هتظهر هنا.</div>';return}
+root.innerHTML=list.map(p=>{const id=encodeURIComponent(String(p.id)),cover=p.displayCover;return `<article class="app"><button class="more-btn" data-menu="${escapeHTML(id)}">⋮</button><div class="more-menu" id="menu-${escapeHTML(id)}"><button data-share="${escapeHTML(id)}">📤 مشاركة البرنامج</button><button data-copy="${escapeHTML(id)}">🔗 نسخ الرابط</button></div>${cover?`<img class="card-cover" src="${escapeHTML(cover)}" alt="" loading="lazy">`:`<div class="card-cover" style="display:grid;place-items:center;font-size:40px">📦</div>`}<h3 class="card-title">${escapeHTML(p.name)}</h3><p class="card-desc">${escapeHTML(p.description||"اكتشف تفاصيل البرنامج.")}</p><div class="meta"><span>${escapeHTML(p.category||"تطبيقات")}</span><span>${escapeHTML(p.version||"")}</span></div><button class="card-open" data-open="${escapeHTML(id)}">عرض وتحميل البرنامج</button></article>`}).join("")}
+function getProgramLink(p){const url=new URL(window.location.href);url.search="";url.hash="";url.searchParams.set("app",String(p.id));return url.href}
+async function copyText(text){try{if(navigator.clipboard&&window.isSecureContext)await navigator.clipboard.writeText(text);else{const input=document.createElement("textarea");input.value=text;input.style.position="fixed";input.style.opacity="0";document.body.appendChild(input);input.select();const ok=document.execCommand("copy");input.remove();if(!ok)throw new Error("copy failed")}return true}catch(e){return false}}
+async function copyProgramLink(id){const p=preparedPrograms.find(x=>String(x.id)===String(id));if(!p)return;const ok=await copyText(getProgramLink(p));showToast(ok?"تم نسخ رابط البرنامج 🔗":"تعذر نسخ الرابط")}
+async function shareProgram(id){const p=preparedPrograms.find(x=>String(x.id)===String(id));if(!p)return;const link=getProgramLink(p);if(navigator.share){try{await navigator.share({title:p.name,text:"شوف البرنامج ده على 𝑷𝑹𝑰𝑴𝑶 𝑺𝑻𝑶𝑹𝑬",url:link})}catch(e){}}else await copyProgramLink(id)}
+function toggleDetailMenu(){$("detailMenu")?.classList.toggle("show")}
+async function detailAction(action){if(!currentProgram)return;const p=currentProgram,link=getProgramLink(p);$("detailMenu")?.classList.remove("show");if(action==="share")await shareProgram(p.id);else if(action==="copy")showToast(await copyText(link)?"تم نسخ الرابط 🔗":"تعذر النسخ");else if(action==="name")showToast(await copyText(p.name)?"تم نسخ اسم البرنامج":"تعذر النسخ");else if(action==="store"){const url=new URL(location.href);url.search="";url.hash="";showToast(await copyText(url.href)?"تم نسخ رابط المتجر":"تعذر النسخ")}}
+function renderComments(id){const data=getSocial(id),root=$("commentsList");if(!root)return;if(!data.comments.length){root.innerHTML='<div class="no-comments">لسه مفيش تعليقات. كن أول واحد يعلّق ❤️</div>';return}root.innerHTML=data.comments.slice().reverse().map(c=>`<div class="comment"><b>👤 زائر المتجر</b><p>${escapeHTML(c.text)}</p><small>${escapeHTML(c.date||"")}</small></div>`).join("")}
+function updateSocialUI(id){const data=getSocial(id),likes=$("likeCount"),comments=$("commentCount"),button=$("likeButton");if(likes)likes.textContent=data.likes.length;if(comments)comments.textContent=data.comments.length;if(button){const liked=data.likes.includes("this-device");button.classList.toggle("liked",liked);button.textContent=liked?"❤️ تم تسجيل إعجابك":"🤍 أعجبني البرنامج"}renderComments(id)}
+function toggleLike(){if(!currentProgram)return;const data=getSocial(currentProgram.id),index=data.likes.indexOf("this-device");if(index>=0){data.likes.splice(index,1);showToast("تم إلغاء الإعجاب")}else{data.likes.push("this-device");showToast("شكراً على إعجابك ❤️")}saveSocialData();updateSocialUI(currentProgram.id)}
+function addComment(){if(!currentProgram)return;const input=$("commentInput"),text=input.value.trim();if(!text){showToast("اكتب تعليقك الأول");return}if(text.length>500){showToast("التعليق طويل جدًا");return}const data=getSocial(currentProgram.id);data.comments.push({text,date:new Date().toLocaleString("ar-EG")});saveSocialData();input.value="";updateSocialUI(currentProgram.id);showToast("تم نشر تعليقك بنجاح 💬")}
+function showDetails(id,updateURL=true){const p=preparedPrograms.find(x=>String(x.id)===String(id)&&x.status==="published");if(!p){showToast("البرنامج غير موجود أو غير منشور");return}currentProgram=p;$("storePage").classList.add("hide");$("detailsPage").classList.add("show");if(updateURL){const url=new URL(location.href);url.searchParams.set("app",String(p.id));history.pushState({app:p.id},"",url)}
+const cover=p.displayCover,icon=p.displayIcon,gallery=(p.displayGallery||[]).slice(0,6),download=p.displayDownload,video=safeURL(p.video),extra=p.details||p.fullDescription||p.longDescription||"";
+const galleryHTML=gallery.length?`<div class="detail-section"><h3>🖼 معرض صور البرنامج</h3><div class="gallery">${gallery.map(src=>`<img src="${escapeHTML(src)}" alt="صورة البرنامج" loading="lazy">`).join("")}</div></div>`:"";
+const detailsHTML=`<div class="detail-shell">${cover?`<img class="detail-cover" src="${escapeHTML(cover)}" alt="غلاف البرنامج">`:`<div class="detail-cover" style="display:grid;place-items:center;font-size:50px">👑</div>`}<div class="detail-head"><div class="detail-tools"><button class="detail-more" onclick="toggleDetailMenu()">⋮ خيارات البرنامج</button><div class="detail-menu" id="detailMenu"><button onclick="detailAction('share')">📤 مشاركة التطبيق</button><button onclick="detailAction('copy')">🔗 نسخ رابط التطبيق</button><button onclick="detailAction('name')">📋 نسخ اسم التطبيق</button><button onclick="detailAction('store')">🏪 نسخ رابط المتجر</button></div></div>${icon?`<img class="profile-icon" src="${escapeHTML(icon)}" alt="أيقونة البرنامج">`:`<div class="profile-icon" style="display:inline-grid;place-items:center;font-size:35px">📦</div>`}<h1>${escapeHTML(p.name)}</h1><div class="detail-category">${escapeHTML(p.category||"تطبيقات")}</div><p class="detail-description">${escapeHTML(p.description||"لا يوجد وصف متاح لهذا البرنامج.")}</p></div>${galleryHTML}${extra?`<div class="detail-section"><h3>📋 تفاصيل البرنامج</h3><div class="detail-text">${escapeHTML(extra)}</div></div>`:""}<div class="detail-section"><h3>👑 معلومات البرنامج</h3><div class="info-line"><span>اسم البرنامج</span><b>${escapeHTML(p.name||"—")}</b></div><div class="info-line"><span>التصنيف</span><b>${escapeHTML(p.category||"—")}</b></div><div class="info-line"><span>الإصدار</span><b>${escapeHTML(p.version||"—")}</b></div><div class="info-line"><span>الحجم</span><b>${escapeHTML(p.size||"—")}</b></div><div class="info-line"><span>المطور</span><b>${escapeHTML(p.developer||"—")}</b></div></div><div class="detail-section"><h3>❤️ تفاعل الزوار</h3><div class="social-stats"><div class="social-stat"><b id="likeCount">0</b><span>إعجاب ❤️</span></div><div class="social-stat"><b id="commentCount">0</b><span>تعليق 💬</span></div></div><button class="like-button" id="likeButton" onclick="toggleLike()">🤍 أعجبني البرنامج</button><div class="comment-form"><h3>💬 اكتب تعليقك</h3><textarea id="commentInput" maxlength="500" placeholder="اكتب رأيك في البرنامج..."></textarea><button class="comment-submit" onclick="addComment()">نشر التعليق</button></div><div style="margin-top:20px"><h3>📨 تعليقات الزوار</h3><div id="commentsList"></div></div></div><div class="action-area">${download?`<a class="download-main" href="${escapeHTML(download)}" ${p.fileId?'download':'target="_blank" rel="noopener"'}>⬇ تحميل البرنامج الآن</a>`:`<div class="download-main" style="opacity:.5">التحميل غير متاح حاليًا</div>`}${video?`<a class="youtube-btn" href="${escapeHTML(video)}" target="_blank" rel="noopener"><span class="youtube-icon">▶</span>شرح البرنامج</a><div class="youtube-note">⚠️ شاهد فيديو شرح البرنامج لمعرفة طريقة الاستخدام والباسورد إن وُجد.</div>`:""}</div></div>`;
+$("detailsContent").innerHTML=detailsHTML;updateSocialUI(p.id);window.scrollTo({top:0,behavior:"smooth"})}
+function goHome(updateURL=true){currentProgram=null;$("detailsPage").classList.remove("show");$("storePage").classList.remove("hide");if(updateURL){const url=new URL(location.href);url.searchParams.delete("app");history.pushState({home:true},"",url)}window.scrollTo({top:0,behavior:"smooth"})}
+function checkSharedLink(){const appId=new URLSearchParams(location.search).get("app");if(!appId)return;const p=preparedPrograms.find(x=>String(x.id)===String(appId)&&x.status==="published");if(p)showDetails(p.id,false);else showToast("البرنامج غير موجود في بيانات هذا المتجر")}
+window.addEventListener("popstate",()=>{const appId=new URLSearchParams(location.search).get("app");if(appId)showDetails(appId,false);else goHome(false)});
+$("apps").addEventListener("click",async e=>{const menu=e.target.closest("[data-menu]"),copy=e.target.closest("[data-copy]"),share=e.target.closest("[data-share]"),open=e.target.closest("[data-open]");if(menu){const id=decodeURIComponent(menu.dataset.menu);document.querySelectorAll(".more-menu").forEach(m=>{if(m.id!=="menu-"+id)m.classList.remove("show")});$("menu-"+id)?.classList.toggle("show");return}if(copy){const id=decodeURIComponent(copy.dataset.copy);$("menu-"+id)?.classList.remove("show");await copyProgramLink(id);return}if(share){const id=decodeURIComponent(share.dataset.share);$("menu-"+id)?.classList.remove("show");await shareProgram(id);return}if(open)showDetails(decodeURIComponent(open.dataset.open))});
+document.addEventListener("click",e=>{if(!e.target.closest(".more-btn")&&!e.target.closest(".more-menu"))document.querySelectorAll(".more-menu").forEach(m=>m.classList.remove("show"));if(!e.target.closest(".detail-tools"))$("detailMenu")?.classList.remove("show")});
+$("search").addEventListener("input",render);
+document.querySelectorAll(".categories button").forEach(btn=>btn.addEventListener("click",()=>{document.querySelectorAll(".categories button").forEach(b=>b.classList.remove("active"));btn.classList.add("active");selectedCategory=btn.dataset.category;render()}));
+window.addEventListener("storage",e=>{if(e.key===STORAGE_KEY)loadPrograms();if(e.key===SOCIAL_KEY){loadSocialData();if(currentProgram)updateSocialUI(currentProgram.id)}});
+loadSocialData();
+loadPrograms();
+</script>
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
+import { getFirestore, collection, getDocs, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-firestore.js";
+
+const firebaseConfig = {
+ apiKey: "AIzaSyASNhYxCYnKREKSkw6guObb_SObI_DwhMA",
+ authDomain: "primo-store-5b96a.firebaseapp.com",
+ projectId: "primo-store-5b96a",
+ messagingSenderId: "293064320079",
+ storageBucket: "primo-store-5b96a.firebasestorage.app",
+ appId: "1:293064320079:web:d7dc8911434f168c92363a",
+ measurementId: "G-MPLWR930K6"
+};
+
+try {
+ const app = initializeApp(firebaseConfig);
+ const db = getFirestore(app);
+ window.PRIMO_FIREBASE = { db, collection, getDocs, addDoc, serverTimestamp, connected:true };
+ console.log("PRIMO STORE Firebase Ready");
+ // إصلاح ترتيب التحميل: انتظر جاهزية Firebase ثم أعد جلب البرامج من Firestore.
+ if (typeof window.loadProgramsFromFirebase === "function") {
+   window.loadProgramsFromFirebase();
+ } else {
+   window.addEventListener("load", () => window.loadProgramsFromFirebase?.(), {once:true});
+ }
+} catch (error) {
+ console.error("PRIMO STORE Firebase initialization error:", error);
+}
+</script>
+</body>
+</html>
